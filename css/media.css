@@ -1,0 +1,17 @@
+
+            @media screen and (max-width: 768px) {
+                .desktop {
+                    display: none;
+                }
+                .editor-note {
+                    height: 150px;
+                }
+            }
+            @media screen and (min-width: 769px) {
+                .top-row {
+                    margin-top: 40px;
+                }
+                .mobile {
+                    display: none;
+                }
+            }

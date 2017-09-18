@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CSI News Letter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="ng/ng-min.js" type="text/javascript"></script>
+        <script src="ng/ng-animate.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/media.css" rel="stylesheet" type="text/css"/>
+        <style>            
+        </style>
+    </head>
+    <body style="background-color: #888;">
+        <div class="container" style="background-color: white;" ng-app="csiApp" ng-controller="csiCtrl">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="animate-show-hide" w3-include-html="menu.html" ng-show="boolHead">                        
+                    </div>
+                    <div 
+                         style="position: absolute; 
+                         right: 10px; 
+                         top: 10px;
+                         z-index: 1;" 
+                         ng-click="boolHead = !(boolHead);"
+                         ng-class="{'turn-0':boolHead,'turn-180': !(boolHead)}">
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12 editor-note" 
+                     style="">
+                    Editor Note:
+                    <div class="row">
+                        <div class="col-md-12" ng-repeat="eN in editorNote">
+                            {{eN.line}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 chapter-activities" 
+                     style="">
+                    Chapter Activities:
+                    <div class="row">
+                        <div class="col-md-12" ng-repeat="cA in chaptAct">
+                            {{cA.line}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-12 forthcoming-activities" 
+                     style="">
+                    Forthcoming Activities:
+                    <div class="row">
+                        <div class="col-md-12" ng-repeat="cA in chaptAct">
+                            {{cA.line}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 col-xs-12 editor-note" 
+                     style="">
+                    Hot Trends in IT:
+                    <div class="row">
+                        <div class="col-md-12" ng-repeat="tL in techLinks">
+                            <a href="{{tL.url}}" target="_blank">{{tL.title}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-6 col-xs-12 editor-note" 
+                     style="">
+                    Chapter Activities:
+                </div>
+            </div>
+        </div>
+        <script src="js/generic.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>
