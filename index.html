@@ -20,27 +20,27 @@ and open the template in the editor.
         <style>            
         </style>
     </head>
-    <body style="background-color: #888;">
+    <body style="background-color: #888; font-family: 'calibri';">
         <div class="container" style="background-color: white;" ng-app="csiApp" ng-controller="csiCtrl">
-            <div class="row animate-show-hide" ng-hide="boolHead" style="margin: 0; padding:0;">
+            <div class="row animate-show-hide" style="margin: 0; padding:0;">
                 <div class="col-md-12" style="margin: 0; padding:0;">
-                    <span style="float: left;">CSI - Vizag Chapter</span>
-                    <span style="float: right;">News Letter <i style="font-size: 11px;">30-09-2017</i></span>
+                    <span style="float: left;" ng-hide="boolHead">CSI - Vizag Chapter</span>
+                    <span style="float: left;" ng-hide="boolHead">News Letter <i style="font-size: 11px;">September-17</i></span>
+                    <div 
+                        style="position: absolute; 
+                        right: 10px; 
+                        top: 10px;
+                        z-index: 1;" 
+                        ng-click="boolHead = !(boolHead);"
+                        ng-class="{'turn-0':boolHead,'turn-180': !(boolHead)}">
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="animate-show-hide" w3-include-html="menu.html" ng-show="boolHead">                        
-                    </div>
-                    <div 
-                         style="position: absolute; 
-                         right: 10px; 
-                         top: 10px;
-                         z-index: 1;" 
-                         ng-click="boolHead = !(boolHead);"
-                         ng-class="{'turn-0':boolHead,'turn-180': !(boolHead)}">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </div>                    
+                    </div>                  
                 </div>
             </div>
             <div class="row">
