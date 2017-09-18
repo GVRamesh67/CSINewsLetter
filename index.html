@@ -22,6 +22,12 @@ and open the template in the editor.
     </head>
     <body style="background-color: #888;">
         <div class="container" style="background-color: white;" ng-app="csiApp" ng-controller="csiCtrl">
+            <div class="row animate-show-hide" ng-hide="boolHead" style="margin: 0; padding:0;">
+                <div class="col-md-12" style="margin: 0; padding:0;">
+                    <span style="float: left;">CSI - Vizag Chapter</span>
+                    <span style="float: right;">News Letter <i style="font-size: 11px;">30-09-2017</i></span>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="animate-show-hide" w3-include-html="menu.html" ng-show="boolHead">                        
