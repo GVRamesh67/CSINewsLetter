@@ -23,6 +23,7 @@
 
 .animate-show-hide.ng-hide {
     opacity: 0;
+    height: 0;
 }
 
 .animate-show-hide.ng-hide-add,
