@@ -1,14 +1,16 @@
-.chapter-heading, .editor-note, .chapter-activities,.forthcoming-activities {
+.editor-note, .chapter-activities,.forthcoming-activities {
     background-color: rgb(221, 255, 221);   
     border-left: rgb(76, 175, 80) thin solid;   
     border-top: rgb(76, 175, 80) thin solid; 
+    box-shadow: #777 0 5px 5px;
+    margin-bottom: 10px;
 }
 .editor-note, .chapter-activities,.forthcoming-activities, .technical-article {
     border-radius: 0 0 20px 20px;
     overflow-y: scroll;
 }
 .editor-note {
-    height: 350px;
+    height: 365px;
 }
 .chapter-activities {
     height: 150px;
@@ -49,4 +51,11 @@
 
 .ng-binding {
     margin-bottom: 5px;
+}
+
+.chapter-heading {
+    background-color: #444; 
+    box-shadow: #777 0 5px 5px;
+    color: white;
+    margin-bottom: 2px;
 }
