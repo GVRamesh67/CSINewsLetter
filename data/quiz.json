@@ -1,0 +1,98 @@
+[
+    {
+        "question": "What is the uptime for tier II datacenter?",
+         "option1": "0.99749",
+         "option2": "0.99982",
+         "option3": "0.99995",
+         "option4": "0.99671",
+         "answer": "1"
+    },
+    {
+        "question": "How many writing scripts of the world are currently supported by Unicode:",
+         "option1": "25",
+         "option2": "135",
+         "option3": "100",
+         "option4": "75",
+         "answer": "2"
+    },
+    {
+        "question": "Which agency gives datacenter cooling guidelines?",
+         "option1": "WHO",
+         "option2": "NASA",
+         "option3": "Uptime Institute",
+         "option4": "ASHRAE  ",
+         "answer": "4"
+    },
+    {
+        "question": "Which one of the following statements describes shareware?",
+         "option1": "Totally free software that is available only on the Internet",
+         "option2": "Commercial based software that must be paid for",
+         "option3": "Software available for free on a trial basis after which payment will be required  ",
+         "option4": "Copyright free software that allows unlimited copies and distribution",
+         "answer": "3"
+    },
+    {
+        "question": "Which one of the following is an input/output port?",
+         "option1": "Linear",
+         "option2": "Radial",
+         "option3": "Lateral",
+         "option4": "FireWire  ",
+         "answer": "4"
+    },
+    {
+        "question": "What O/S does SAP HANA run on?",
+         "option1": "RHEL and SLES ",
+         "option2": "Windows",
+         "option3": "AIX",
+         "option4": "HP-UX",
+         "answer": "1"
+    },
+    {
+        "question": "Which one of the following is a method of publishing frequently updated content such as news headlines online?",
+         "option1": "A blog",
+         "option2": "RSS  ",
+         "option3": "A podcast.",
+         "option4": "Instant messaging",
+         "answer": "2"
+    },
+    {
+        "question": "Which one of the following statements about an End User License Agreement is true?",
+         "option1": "It gives full ownership of the software to the user of the software",
+         "option2": "It gives the user the exclusive right to copy and sell the software to other potential users",
+         "option3": "It gives the user the right to modify the software",
+         "option4": "It gives the user the right to install and run the software on a specified number of computers  ",
+         "answer": "4"
+    },
+    {
+        "question": "What is Oracle IMDB?",
+         "option1": "Oracle Inter-Memory Database",
+         "option2": "Oracle Intra-Memory Database",
+         "option3": "Oracle In-Memory Database  ",
+         "option4": "None of the above",
+         "answer": "3"
+    },
+    {
+        "question": "What does RSI in computer term stand for?",
+         "option1": "Repeated Strain Inclusion",
+         "option2": "Regular Systems Initiation",
+         "option3": "Routine Structures Infection",
+         "option4": "Repetitive Strain Injury  ",
+         "answer": "4"
+    },
+    {
+        "question": "Which one of the following is a term for an audio or video recording posted on a web site that can be downloaded and played later?",
+         "option1": "Podcast  ",
+         "option2": "Blog",
+         "option3": "VoIP",
+         "option4": "RSS Feed",
+         "answer": "1"
+    },
+    {
+        "question": "The relatively newer '_aaS' in cloud computing is:",
+         "option1": "IaaS",
+         "option2": "PaaS",
+         "option3": "BioAaaS  ",
+         "option4": "SaaS",
+         "answer": "3"
+    }
+]

@@ -81,6 +81,14 @@ and open the template in the editor.
                         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="eN in editorNote">
                             {{eN.line}}
                         </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span style="padding: 10px; 
+                                  font-weight: lighter; 
+                                  font-size: 24px; 
+                                  transform: rotate(-5deg);
+                                  font-family: mistral;
+                                  float: right;">GVRamesh ..</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-12 col-xs-12">
@@ -136,22 +144,101 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12" 
-                     style="">
+            </div>
+            <div class="row" style="margin-top: -10px;">
+                <div class="col-md-8 col-sm-12 col-xs-12">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Technical Article (Java-8 vs Java-9):</span>
-                            <div class="mobile" style="float: right;"
-                                 ng-click="boolTechPaper = !(boolTechPaper);"
-                                 ng-class="{'turn-0': !(boolTechPaper), 'turn-180': boolTechPaper}">
+                            <span>Technical Article (Java-8 vs Java-9)</span>
+                            <div style="float: right;"
+                                 ng-click="boolTechPaper1 = !(boolTechPaper1);"
+                                 ng-class="{'turn-0': !(boolTechPaper1), 'turn-180': boolTechPaper1}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
                     </div>                    
-                    <div class="row technical-article" ng-show="boolTechPaper">
+                    <div class="animate-show-hide row technical-article2" ng-show="boolTechPaper1">
                         <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="java8_java9.htm" ng-show="boolHead">
                         </div>
-                    </div>                 
+                    </div>
+                    <div class="row chapter-heading">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>Technical Article (GO Programming)</span>
+                            <div style="float: right;"
+                                 ng-click="boolTechPaper2 = !(boolTechPaper2);"
+                                 ng-class="{'turn-0': !(boolTechPaper2), 'turn-180': boolTechPaper2}">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>                            
+                    </div>                    
+                    <div class="animate-show-hide row technical-article2" ng-show="boolTechPaper2">
+                        <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="GO.htm" ng-show="boolHead">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="row chapter-heading">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>Luminary born in the Month (Rajeev Suri)</span>
+                            <div style="float: right;"
+                                 ng-click="boolTechPaper3 = !(boolTechPaper3);"
+                                 ng-class="{'turn-0': !(boolTechPaper3), 'turn-180': boolTechPaper3}">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>                            
+                    </div>                    
+                    <div class="animate-show-hide row technical-article" ng-show="boolTechPaper3">
+                        <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="rajeevsuri.htm" ng-show="boolHead">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: -10px; margin-bottom: 20px;">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row chapter-heading">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>Quiz</span>
+                            <div style="float: right;"
+                                 ng-click="boolTechPaper4 = !(boolTechPaper4);"
+                                 ng-class="{'turn-0': !(boolTechPaper4), 'turn-180': boolTechPaper4}">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                    </div>                            
+                </div>
+                <div class="animate-show-hide row" ng-show="boolTechPaper4">
+                    <div class="col-md-12" ng-repeat="q in quizQuestions"
+                         ng-show="currentQuestionNo === $index">
+                        <div class="col-md-12 col-sm-12 col-xs-12"
+                             style="padding-top: 20px;">
+                            <b>{{$index + 1 + ". " + q.question}}</b>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <input type="radio" name="{{'options' + $index}}" 
+                                   ng-model="q.chosenAnswer" value="1" 
+                                   ng-click="checkAnswer($index)"
+                                   ng-disabled="!(q.active)"> {{q.option1}}</div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <input type="radio" name="{{'options' + $index}}" 
+                                   ng-model="q.chosenAnswer" value="2" 
+                                   ng-click="checkAnswer($index)"
+                                   ng-disabled="!(q.active)"> {{q.option2}}</div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <input type="radio" name="{{'options' + $index}}" 
+                                   ng-model="q.chosenAnswer" value="3" 
+                                   ng-click="checkAnswer($index)"
+                                   ng-disabled="!(q.active)"> {{q.option3}}</div>
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <input type="radio" name="{{'options' + $index}}" 
+                                   ng-model="q.chosenAnswer" value="4" 
+                                   ng-click="checkAnswer($index)"
+                                   ng-disabled="!(q.active)"> {{q.option4}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center; font-size: 12px; background-color: black; color: white;">
+                    CSI - Visakhapatnam Chapter
                 </div>
             </div>
         </div>

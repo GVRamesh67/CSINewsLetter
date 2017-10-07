@@ -5,7 +5,7 @@
     box-shadow: #777 0 5px 5px;
     margin-bottom: 10px;
 }
-.editor-note, .chapter-activities,.forthcoming-activities, .technical-article {
+.editor-note, .chapter-activities,.forthcoming-activities, .technical-article, .technical-article2 {
     border-radius: 0 0 20px 20px;
     overflow-y: scroll;
 }
@@ -47,6 +47,11 @@
     border-left: rgb(76, 175, 80) thin solid;   
     border-top: rgb(76, 175, 80) thin solid;
     height: 600px;
+}
+.technical-article2 {   
+    border-left: rgb(76, 175, 80) thin solid;   
+    border-top: rgb(76, 175, 80) thin solid;
+    height: 290px;
 }
 
 .ng-binding {
