@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Editor Note",
+        "anchor": "1"
+    },
+    {
+        "title": "From Secretary's Desk",
+        "anchor": "2"
+    },
+    {
+        "title": "Chapter Activities",
+        "anchor": "3"
+    },
+    {
+        "title": "Forthcoming Activities",
+        "anchor": "4"
+    },
+    {
+        "title": "Hot Trends in IT",
+        "anchor": "5"
+    },
+    {
+        "title": "Technical Article (Java - 8 vs Java - 9)",
+        "anchor": "6"
+    },
+    {
+        "title": "Technical Article (GO Programming)",
+        "anchor": "7"
+    },
+    {
+        "title": "Luminary born in the Month",
+        "anchor": "8"
+    },
+    {
+        "title": "Quiz",
+        "anchor": "9"
+    },
+    {
+        "title": "Problem Corner",
+        "anchor": "10"
+    }
+]

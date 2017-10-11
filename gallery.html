@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div id="myCarousel" class="carousel slide" data-ride="carousel" ng-app="galleryApp" ng-controller="galleryCtrl">
@@ -29,14 +30,19 @@
                 <li data-target="#myCarousel" data-slide-to="12"></li>
                 <li data-target="#myCarousel" data-slide-to="13"></li>
                 <li data-target="#myCarousel" data-slide-to="14"></li>
+                <li data-target="#myCarousel" data-slide-to="15"></li>
+                <li data-target="#myCarousel" data-slide-to="16"></li>
+                <li data-target="#myCarousel" data-slide-to="17"></li>
+                <li data-target="#myCarousel" data-slide-to="18"></li>
+                <li data-target="#myCarousel" data-slide-to="19"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="item active">
-                    <img src="images/30-09-17/DSC_2721.JPG" alt=""/>
+                <div class="item active centre-justify">
+                    <img src="images/30-09-17/1.jpg" alt="" style="margin: auto;"/>
                 </div>
-                <div class="item" ng-repeat="photo in photos">
-                    <img src="{{'images/30-09-17/'+photo.name+'.JPG'}}" alt=""/>
+                <div class="item centre-justify" ng-repeat="photo in photos">
+                    <img src="{{'images/30-09-17/'+photo.name+'.jpg'}}" alt="" style="margin: auto;"/>
                 </div>
             </div>
 

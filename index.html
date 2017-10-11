@@ -9,11 +9,11 @@ and open the template in the editor.
         <title>CSI News Letter</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="ng/ng-min.js" type="text/javascript"></script>
-        <script src="ng/ng-animate.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="ng/ng-min.js" type="text/javascript"></script>
+        <script src="ng/ng-animate.js" type="text/javascript"></script>
         <script src="https://www.w3schools.com/lib/w3.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <link href="css/media.css" rel="stylesheet" type="text/css"/>
@@ -21,46 +21,77 @@ and open the template in the editor.
         </style>
     </head>
     <body style="background-color: #888; font-family: 'calibri';">
-        <div class="container" style="background-color: white;" ng-app="csiApp" ng-controller="csiCtrl">
-            <!--div class="row animate-show-hide" style="margin: 0; padding:0;">
-                <div class="col-md-12" style="margin: 0; padding:0;">
-                    <span style="float: left;" ng-hide="boolHead">CSI - Vizag Chapter</span>
-                    <span style="float: left;" ng-hide="boolHead">Newsletter <i style="font-size: 11px;">September-17</i></span>                    
-                </div>
-            </div-->
+        <div id="ID_CONTAINER" class="container" style="background-color: white;" ng-app="csiApp" ng-controller="csiCtrl">
+            <a id="top"></a>
+            <div class="animate-show-hide"
+                 style="position: fixed; bottom: 50px; right: 10px; z-index: 1;"
+                 ng-show="boolScrollTop"
+                 ng-click="scrollToTop()">
+                <svg class="svg-icon" height="30" width="30" fill="none">
+                <circle cx="15" cy="15" r="10" fill="rgb(32,77,116)" stroke="white"/>
+                <path d="m 15 20 l 0 -10 l -3 5 l 6 0 l -3 -5" stroke="white"/>
+                </svg>
+            </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="row" style="background-color: rgb(217, 237, 247); padding-bottom: 10px;">
                         <div class="desktop" style="position: absolute; top: 10px;">
                             <img src="images/CSILogo.jpg" alt="logo" width="60"/>
                         </div>
-                        <div class="col-md-10 desktop" style="text-align: left; font-family: 'times new roman'; padding-left: 70px;">
-                            <h2>Computer Society of India - Vizag Chapter <i style="color: #666;">Newsletter</i></h2>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <img src="images/ITbits.png" alt="" height="50" style="float: right;"/>
                         </div>
-                        <div class="col-sm-12 col-xs-12 mobile" style="text-align: center;">
-                            <h3>CSI - Vizag Chapter <i style="color: #666;">Newsletter</i></h3>
-                        </div>
-                        <div class="col-md-2 col-sm-12 col-xs-12 desktop" style="float: right; font-size: 13px; padding-top: 40px; text-align: right;">
-                            <i>September-17</i>
-                        </div>
-                        <div class="col-md-2 col-sm-12 col-xs-12 mobile" style="float: right; font-size: 13px; text-align: right;">
-                            <i>September-17</i>
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: right; font-family: 'times new roman';">
+                            <b>Computer&nbspSociety&nbspof&nbspIndia&nbsp-Visakhapatnam&nbspChapter-&nbsp<i>October-17</i></b>
                         </div>
                     </div>
                     <div class="row" style="background-color: #444; box-shadow: #777 0 5px 5px;">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <!--a href="index.html" class="btn btn-success btn-sm" style="float: left; margin-left: 5px;">
                                 <span class="glyphicon glyphicon-home"></span> Home
-                            </a--> 
-                            <a href="mailto: gvramesh67@gmail.com?subject=CSINewsLetter-Sept-17-Issue" class="btn btn-success btn-sm" style="float: right; margin-left: 5px;">
+                            </a-->  
+                            <button class="btn btn-success btn-sm" style="margin-left: 5px;" ng-click="boolContributors = !(boolContributors)">
+                                <span class="glyphicon glyphicon-user"></span> Contributors
+                            </button> 
+                            <a href="mailto: gvramesh67@gmail.com?subject=CSINewsLetter-October-17-Issue" class="btn btn-success btn-sm" style="margin-left: 5px;">
                                 <span class="glyphicon glyphicon-envelope"></span> Contact Us
                             </a> 
-                            <a href="gallery.html" target="_blank" class="btn btn-success btn-sm" style="float: right; margin-left: 5px;">
+                            <a href="gallery.html" target="_blank" class="btn btn-success btn-sm" style="margin-left: 5px;">
                                 <span class="glyphicon glyphicon-camera"></span> Gallery
                             </a> 
-                            <!--a href="#" class="btn btn-success btn-sm" style="float: right; margin-left: 5px;">
-                                <span class="glyphicon glyphicon-user"></span> Contributors
-                            </a-->        
+                            <button class="btn btn-success btn-sm" style="margin-left: 5px; float: right;" ng-click="boolMenu = !(boolMenu)">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>&nbspMenu
+                            </button>       
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="menu-box animate-show-hide" ng-show="boolMenu">
+                        <div class="row" style="position: relative;">
+                            <div class="col-md-12 col-sm-12 col-xs-12 menu-item" ng-repeat="m in menu" ng-click="scrollTo(m.anchor)">
+                                {{m.title}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contributor-box animate-show-hide" ng-show="boolContributors">
+                        <div class="row" style="position: relative;">
+                            <div class="row contributor-item" ng-repeat="e in editorialStaff">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    {{e.title}}
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" style="color: yellow;">
+                                    {{e.name}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row contributor-item" ng-repeat="c in contributors">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    {{c.title}}
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" style="color: yellow;">
+                                    {{c.name}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,14 +100,15 @@ and open the template in the editor.
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Editor Note:</span>
+                            <span>Editor Note</span>
                             <div class="mobile" style="float: right;"
                                  ng-click="boolEditerNote = !(boolEditerNote);"
                                  ng-class="{'turn-0': !(boolEditerNote), 'turn-180': boolEditerNote}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>
+                    </div>  
+                    <a id="1"></a>
                     <div class="row editor-note animate-show-hide" ng-show="boolEditerNote">
                         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="eN in editorNote">
                             {{eN.line}}
@@ -91,17 +123,44 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Chapter Activities:</span>
+                            <span>From Secretary's Desk</span>
+                            <div class="mobile" style="float: right;"
+                                 ng-click="boolChapterAct = !(boolChapterAct);"
+                                 ng-class="{'turn-0': !(boolSecDesk), 'turn-180': boolSecDesk}">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>                            
+                    </div>  
+                    <a id="2"></a>
+                    <div class="row chapter-activities animate-show-hide" ng-show="boolSecDesk">
+                        <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="sN in secNote">
+                            {{sN.line}}
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span style="padding: 10px; 
+                                  font-weight: lighter; 
+                                  font-size: 24px; 
+                                  transform: rotate(-5deg);
+                                  font-family: mistral;
+                                  float: right;">Anindya Paul ..</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="row chapter-heading">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>Chapter Activities</span>
                             <div class="mobile" style="float: right;"
                                  ng-click="boolChapterAct = !(boolChapterAct);"
                                  ng-class="{'turn-0': !(boolChapterAct), 'turn-180': boolChapterAct}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>
+                    </div>  
+                    <a id="3"></a>
                     <div class="row chapter-activities animate-show-hide" ng-show="boolChapterAct">
                         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="cA in chaptAct">
                             {{cA.line}}
@@ -112,14 +171,15 @@ and open the template in the editor.
                      style="">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Forthcoming Activities:</span>
+                            <span>Forthcoming Activities</span>
                             <div class="mobile" style="float: right;"
                                  ng-click="boolFutureAct = !(boolFutureAct);"
                                  ng-class="{'turn-0': !(boolFutureAct), 'turn-180': boolFutureAct}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>                    
+                    </div>  
+                    <a id="4"></a>
                     <div class="row forthcoming-activities" ng-show="boolFutureAct">
                         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="cA in futureAct">
                             {{cA.line}}
@@ -130,14 +190,15 @@ and open the template in the editor.
                      style="">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Hot Trends in IT:</span>
+                            <span>Hot Trends in IT</span>
                             <div class="mobile" style="float: right;"
                                  ng-click="boolHotTrends = !(boolHotTrends);"
                                  ng-class="{'turn-0': !(boolHotTrends), 'turn-180': boolHotTrends}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>                    
+                    </div>  
+                    <a id="5"></a>
                     <div class="row forthcoming-activities" ng-show="boolHotTrends">
                         <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="tL in techLinks">
                             <a href="{{tL.url}}" target="_blank">{{tL.title}}</a>
@@ -156,7 +217,8 @@ and open the template in the editor.
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>                    
+                    </div>  
+                    <a id="6"></a>                  
                     <div class="animate-show-hide row technical-article2" ng-show="boolTechPaper1">
                         <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="java8_java9.htm" ng-show="boolHead">
                         </div>
@@ -170,7 +232,8 @@ and open the template in the editor.
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>                    
+                    </div>   
+                    <a id="7"></a>                 
                     <div class="animate-show-hide row technical-article2" ng-show="boolTechPaper2">
                         <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="GO.htm" ng-show="boolHead">
                         </div>
@@ -179,14 +242,15 @@ and open the template in the editor.
                 <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="row chapter-heading">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <span>Luminary born in the Month (Rajeev Suri)</span>
+                            <span>Luminary born in the Month</span>
                             <div style="float: right;"
                                  ng-click="boolTechPaper3 = !(boolTechPaper3);"
                                  ng-class="{'turn-0': !(boolTechPaper3), 'turn-180': boolTechPaper3}">
                                 <span class="glyphicon glyphicon-chevron-down"></span>
                             </div>
                         </div>                            
-                    </div>                    
+                    </div>  
+                    <a id="8"></a>                  
                     <div class="animate-show-hide row technical-article" ng-show="boolTechPaper3">
                         <div class="animate-show-hide col-md-12 col-sm-12 col-xs-12" w3-include-html="rajeevsuri.htm" ng-show="boolHead">
                         </div>
@@ -236,6 +300,29 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
+            <a id="9"></a>
+            <div class="row" style="margin-top: -10px; margin-bottom: 20px;">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row chapter-heading">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <span>Problem Corner</span>
+                            <div style="float: right;"
+                                 ng-click="boolTechPaper5 = !(boolTechPaper5);"
+                                 ng-class="{'turn-0': !(boolTechPaper5), 'turn-180': boolTechPaper5}">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                    </div>                            
+                </div>
+                <div class="animate-show-hide row" ng-show="boolTechPaper5">
+                    <div class="col-md-12" style="margin-top: 15px;">
+                        <div ng-repeat="p in problemCorner">
+                            {{p.text}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="10"></a>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center; font-size: 12px; background-color: black; color: white;">
                     CSI - Visakhapatnam Chapter

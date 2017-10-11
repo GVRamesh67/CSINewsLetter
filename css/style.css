@@ -4,6 +4,7 @@
     border-top: rgb(76, 175, 80) thin solid; 
     box-shadow: #777 0 5px 5px;
     margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 .editor-note, .chapter-activities,.forthcoming-activities, .technical-article, .technical-article2 {
     border-radius: 0 0 20px 20px;
@@ -63,4 +64,46 @@
     box-shadow: #777 0 5px 5px;
     color: white;
     margin-bottom: 2px;
+}
+
+.menu-box, .contributor-box {
+    background-color: #444;
+    border-top: #ddd thin solid;
+    border-bottom: #ddd thin solid;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    max-height: 350px;
+    padding: 5px;
+    box-shadow: grey 5px 5px 5px;
+}
+
+.menu-box {
+    border-left: #ddd thin solid;
+    right: 0;
+    max-width: 280px;
+}
+
+.contributor-box {
+    border-right: #ddd thin solid;
+    left: 0;  
+    width: 400px;  
+} 
+
+.menu-item {
+    border-bottom: #888 thin dotted;
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.contributor-item {
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.centre-justify {
+    display: flex; 
+    justify-content: center;
+    vertical-align: central;
 }
