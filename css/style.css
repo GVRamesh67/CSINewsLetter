@@ -1,3 +1,8 @@
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
 .editor-note, .chapter-activities,.forthcoming-activities {
     background-color: rgb(221, 255, 221);   
     border-left: rgb(76, 175, 80) thin solid;   
